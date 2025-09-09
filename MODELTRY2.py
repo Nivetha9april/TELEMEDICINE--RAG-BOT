@@ -621,7 +621,8 @@ def main():
         if st.session_state.messages:
             if st.button("🗑️ Clear Chat History", use_container_width=True):
                 st.session_state.messages = []
-                st.experimental_rerun()
+                st.rerun()
+
 
     with left_col:
         st.markdown(
@@ -689,7 +690,8 @@ def main():
                 with col3:
                     if st.form_submit_button("🔄 Reset", use_container_width=True):
                         st.session_state.messages = []
-                        st.experimental_rerun()
+                        st.rerun()
+
 
                 # Handle form submission
                 if submit and user_input.strip():
@@ -708,7 +710,8 @@ def main():
                             error_msg = f"I apologize, but I encountered an issue: {str(e)}. Please try rephrasing your question."
                             st.session_state.messages.append({"role": "assistant", "content": error_msg})
                     
-                    st.experimental_rerun()
+                    st.rerun()
+
                     
                 elif voice_btn:
                     with st.spinner("🎤 Listening..."):
@@ -727,7 +730,8 @@ def main():
                                     error_msg = f"I apologize, but I encountered an issue: {str(e)}. Please try again."
                                     st.session_state.messages.append({"role": "assistant", "content": error_msg})
                             
-                            st.experimental_rerun()
+                            st.rerun()
+
 
             # Sample questions for user guidance
             if not st.session_state.messages:
@@ -748,7 +752,8 @@ def main():
                             with st.spinner("🤔 Thinking..."):
                                 bot_response = st.session_state.chatbot.generate_response(question, st.session_state.messages)
                                 st.session_state.messages.append({"role": "assistant", "content": bot_response})
-                            st.experimental_rerun()
+                            st.rerun()
+
 
     # Footer
     st.markdown("---")
