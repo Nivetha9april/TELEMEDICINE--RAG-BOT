@@ -1,8 +1,10 @@
 streamlit
-pymongo
-faiss-cpu
+google-generativeai
+requests
+numpy
 sentence-transformers
-google-genai
-transformers
+faiss-cpu
+pymongo
+gTTS
 googletrans==4.0.0-rc1
 SpeechRecognition
