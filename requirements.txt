@@ -6,5 +6,6 @@ sentence-transformers
 faiss-cpu
 pymongo
 gTTS
-googletrans==4.0.0-rc1
+googletrans-py==4.0.0
+
 SpeechRecognition
