@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.DS_Store
+
+# Virtual environments
+venv/
+rasa_env/
+.env/
+*.env
+
+# Credentials & secrets
+config.py
+*.key
+*.pem
+
+# Cache and data
+*.faiss
+*.json
+*.db
+medical_knowledge_index.faiss
+medical_docs.json
+
+# Streamlit cache
+.streamlit/secrets.toml
+.streamlit/cache/
