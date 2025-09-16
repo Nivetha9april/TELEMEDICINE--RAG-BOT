@@ -1,6 +1,8 @@
 
 import streamlit as st
-import google.genai as genai
+#import google.genai as genai
+import google.generativeai as genai
+
 import requests
 import json
 from datetime import datetime
